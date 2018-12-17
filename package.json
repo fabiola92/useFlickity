@@ -25,7 +25,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.26.3",
+    "flickity": "^2.1.2",
+    "flickity-hash": "^1.0.3"
   },
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
