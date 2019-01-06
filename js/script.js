@@ -5,12 +5,4 @@ var flkty = new Flickity( elem, {
   contain: true
 });
 
-
-var flkty = new Flickity( '.main-carousel', {
-  hash: true,
-});
-
-
 flkty.on( 'scroll', function( progress ) {3});
-
-
