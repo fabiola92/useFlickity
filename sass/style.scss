@@ -11,9 +11,10 @@
   color: white;
   font-size: large;
   font-family: Georgia;
+  text-align: center;
 }
 
-text-align: center;
+
 
 }
 
@@ -47,4 +48,16 @@ height: 4px;
 width: 40px;
 margin: 0;
 border-radius: 0;
+}
+
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: black;
+}
+
+#restart {
+  font-size: 26px;
+  position: absolute;
 }
