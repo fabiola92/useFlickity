@@ -1,3 +1,19 @@
+
+//Mustache
+
+var templateCarousel = document.getElementById("carousel-template").innerHTML;
+var carousel = document.querySelector(".main-carousel");
+var carouselElements = "";
+
+for ( var i = 0; i < slideData.length; i++) {
+  carouselElements += Mustache.render(templateCarousel, slideData[i]);
+}
+
+carousel.innerHTML = carouselElements;
+
+
+//Use Flickity
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   // options
