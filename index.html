@@ -9,27 +9,34 @@
     <link rel="stylesheet" href="vendor/flickity.min.css">
 </head>
 <body>
-    <button id="restart-button">restart</button>
+    <!-- Flickity carousel -->
 
     <p class="hash-links">
-        <a href="#carousel-cell1">Photo 1</a>
-        <a href="#carousel-cell2">Photo 2</a>
-        <a href="#carousel-cell3">Photo 3</a>
-        <a href="#carousel-cell4">Photo 4</a>
-        <a href="#carousel-cell5">Photo 5</a>
-      </p>
-  
-      <div class="main-carousel"></div>
-  
-      <script id="carousel-template" type="x-tmpl-mustache">
+      <a href="#carousel-cell1">Photo 1</a>
+      <a href="#carousel-cell2">Photo 2</a>
+      <a href="#carousel-cell3">Photo 3</a>
+      <a href="#carousel-cell4">Photo 4</a>
+      <a href="#carousel-cell5">Photo 5</a>
+    </p>
+    
+    <div class="main-carousel"></div>
 
-        <div class="carousel-cell" style='background-image: url("{{image}}")'>
-          <div class="container">
-            <h1> {{ title }} </h1>
-            {{{ description }}}
+    <!-- Progress bar -->
+    <div class="progress-bar"></div>
+
+    <!--Restart Button-->    
+    <div class="button-group">
+      <button class="restart-button">Restart</button>
+    </div>
+
+    <!-- Mustache slide template -->
+    <script id="carousel-template" type="x-tmpl-mustache">
+      <div class="carousel-cell" style='background-image: url("{{image}}")'>
+        <div class="container">
+          <h1> {{ title }} </h1>
+          {{{ description }}}
           </div>
-        </div>
-
+      </div>
       </script>
   
         <script>
@@ -37,41 +44,39 @@
             {
               image: "images/1.jpg",
               title: "1",
-              description: "<p>...</p>"
+              description: "<p>First photo</p>"
             },
             {
               image: "images/2.jpg",
               title: "2",
-              description: "<p>...</p>"
+              description: "<p>Next photo</p>"
             },
             {
               image: "images/3.jpg",
               title: "3",
-              description: "<p>...</p>"
+              description: "<p>Next photo</p>"
             },
             {
               image: "images/4.jpg",
               title: "4",
-              description: "<p>...</p>"
+              description: "<p>Next photo</p>"
             },
             {
               image: "images/5.jpg",
               title: "5",
-              description: "<p>...</p>"
+              description: "<p>Next photo</p>"
             },
           ]
         </script>
 
-    <div class="progress-bar"></div>
+    <!--Map AI key AIzaSyCmxKBMG2ui3-8nOyqEZ1aLN19D-ZtyYKA-->
 
-    <!--Map -->
+        <div id="map" class="google-map"></div>
 
-
-    <script id="template" type="x-tmpl-mustache">
-    </script>
-
+    <script src="vendor/flickity.pkgd.min.js"></script>      
     <script src="vendor/mustache.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmxKBMG2ui3-8nOyqEZ1aLN19D-ZtyYKA&callback=initMap"></script>
+
 </body>
 </html>
